@@ -116,7 +116,7 @@
 <meta property="og:description" content="这是基于C++ Primer的第一周笔记，主要内容为C++的基本语句和逻辑运算，数据类型与基础表达式。详细请见C++ Primer   1.1-1.3   2.1-2.2   4.1-4.5   4.11.1">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/first-week-1.jpg">
-<meta property="og:updated_time" content="2019-01-20T19:54:28.797Z">
+<meta property="og:updated_time" content="2019-01-20T22:07:54.865Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Primer第一周的笔记">
 <meta name="twitter:description" content="这是基于C++ Primer的第一周笔记，主要内容为C++的基本语句和逻辑运算，数据类型与基础表达式。详细请见C++ Primer   1.1-1.3   2.1-2.2   4.1-4.5   4.11.1">
@@ -413,7 +413,7 @@
                 
               
 
-              <time title="创建时间：2019-01-20 14:10:48 / 修改时间：14:54:28" itemprop="dateCreated datePublished" datetime="2019-01-20T14:10:48-05:00">2019-01-20</time>
+              <time title="创建时间：2019-01-20 14:10:48 / 修改时间：17:07:54" itemprop="dateCreated datePublished" datetime="2019-01-20T14:10:48-05:00">2019-01-20</time>
             
 
             
@@ -471,7 +471,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">14</span>
+                <span title="本文字数">2k</span>
               
 
               
@@ -485,7 +485,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -509,7 +509,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/first-week-1.jpg" rel="gallery_cjr5bmhmi00076cyuvt4lsydm" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/first-week-1.jpg" rel="gallery_cjr5gdry600049byuf5f64mu7" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/first-week-1.jpg" itemprop="contentUrl">
               </a>
             
@@ -521,7 +521,50 @@
       
 
       
-        <h1 id="第一个Hello-World"><a href="#第一个Hello-World" class="headerlink" title="第一个Hello World"></a>第一个<code>Hello World</code></h1>
+        <h1 id="第一个Hello-World"><a href="#第一个Hello-World" class="headerlink" title="第一个Hello World"></a>第一个<code>Hello World</code></h1><p>都说程序员写毛笔字都是提笔就是Hello World，那么C++的第一个程序介绍也从这里开始吧！</p>
+<p>C++的基本构造是从函数（function）开始，其中必有一个main函数，所以C++的基本模版如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> main</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中的main必定属于int类型，所以需要int进行调用和命名。return为最基本的返回项，可有可无，特定情况下仅仅为保留结果和显示。</p>
+<p><strong>重点：每一句结尾都得有一个 ; 这可能会经常被遗忘！</strong></p>
+<p>关于C++的编译和运行，详情可见<a href="https://liutiantian233.github.io/tech/2019/01/mac-cpp-environment.html">C++的最佳环境</a></p>
+<h1 id="C-的输入和输出"><a href="#C-的输入和输出" class="headerlink" title="C++的输入和输出"></a>C++的输入和输出</h1><p>C++与Python不同的是没有内置最基本的 I/O 语句，采用的是STL库（standard library）来进行 I/O 输入和输出。其中最基本的<strong>标准输入</strong>和<strong>标准输出</strong>分别为<strong>cin</strong>和<strong>cout</strong>。当然标准库里还有两个基本语句<strong>cerr</strong>和<strong>clog</strong>分别为错误和警告。</p>
+<h2 id="一个标准程序"><a href="#一个标准程序" class="headerlink" title="一个标准程序"></a>一个标准程序</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Hello World"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第一行就是调用C++的基础STL标准库，俗称头文件。</p>
+<h2 id="输出数据"><a href="#输出数据" class="headerlink" title="输出数据"></a>输出数据</h2><p>在main函数中的：</p>
+<p><code>std::cout &lt;&lt; &quot;Hello World&quot; &lt;&lt; std::endl;</code></p>
+<p><code>&lt;&lt;</code>叫做<strong>输出运算符</strong>，<code>endl</code>叫做<strong>操纵符</strong>，作用分别为输出和短暂缓冲数据。</p>
+<h2 id="读取数据"><a href="#读取数据" class="headerlink" title="读取数据"></a>读取数据</h2><p>这里读取数据采用的是<code>cin</code>语句，通常为：</p>
+<p><code>std::cin &gt;&gt; v1;</code></p>
+<p><code>&gt;&gt;</code>叫做<strong>输入运算符</strong>，作用显而易见，作为输入数据。</p>
+<h1 id="C-中注释的方法"><a href="#C-中注释的方法" class="headerlink" title="C++中注释的方法"></a>C++中注释的方法</h1><p>还记得2018年程序员界最火🔥的两大新闻吗，除了删库跑路，另一个就是同事不写注释，程序员暴走这条了。所以来说，任何程序都应该使用注释来使程序更加易读和易懂。</p>
+<h2 id="C-注释的种类"><a href="#C-注释的种类" class="headerlink" title="C++注释的种类"></a>C++注释的种类</h2><p>C++有两种注释，分别为单行和多行注释。单行注释为双斜线开始（//）至此行结束，多行注释为（/*）开始，（*/）结束。</p>
+<p>值得注意的是，多行注释无法嵌套注释，即：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 嵌套 /* 注释 */</span></span><br><span class="line"> * 是不可行的</span><br><span class="line"> */</span><br></pre></td></tr></table></figure>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>C++中的数据类型包括<strong>算数类型</strong>（arithmetic type）和<strong>空类型</strong>（void），其中空类型不做任何具体的值。</p>
+<h2 id="算数类型"><a href="#算数类型" class="headerlink" title="算数类型"></a>算数类型</h2><p>而算数类型又分为<strong>整型</strong>（包括字符和布尔）和<strong>浮点型</strong>。它们的数据尺寸如下：</p>
+<p><img src="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/first-week-2.png" alt=""></p>
+<h2 id="类型转换（convert）"><a href="#类型转换（convert）" class="headerlink" title="类型转换（convert）"></a>类型转换（convert）</h2><p>顾名思义，这是一种强行将一种类型转换成另一种类型的转换。对于这种转换，在C++中也是允许合法的。比如：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> b = <span class="number">42</span>;     <span class="comment">// b 为 true</span></span><br><span class="line"><span class="keyword">int</span> i = b;       <span class="comment">// i 为 1</span></span><br><span class="line">i = <span class="number">3.14</span>;        <span class="comment">// i 为 3</span></span><br><span class="line"><span class="keyword">double</span> pi = i;   <span class="comment">// pi 为 3.0</span></span><br></pre></td></tr></table></figure>
+<h2 id="字面值常量（literal）"><a href="#字面值常量（literal）" class="headerlink" title="字面值常量（literal）"></a>字面值常量（literal）</h2><p>每一个字面值常量都对应了一个数据类型，它们的形式和值决定了它们的数据类型。</p>
+<h3 id="整型和浮点型字面值"><a href="#整型和浮点型字面值" class="headerlink" title="整型和浮点型字面值"></a>整型和浮点型字面值</h3><p>整型字面值可以写成十进制，八进制，十六进制等，0开头的整数为八进制，0x或者0X开头的为十六进制。我们可以用以下任意一种方法代表20：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">20</span>     <span class="comment">// 十进制</span></span><br><span class="line"><span class="number">024</span>    <span class="comment">// 八进制</span></span><br><span class="line"><span class="number">0x14</span>   <span class="comment">// 十六进制</span></span><br></pre></td></tr></table></figure>
+<p>浮点型字面值一般表现为一个小数或者科学记数法表示的指数，其中指数使用E或者e。</p>
+<h3 id="字符和字符串表示的字面值"><a href="#字符和字符串表示的字面值" class="headerlink" title="字符和字符串表示的字面值"></a>字符和字符串表示的字面值</h3><p>单引号为字符字面值，双引号为字符串字面值。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'a'</span>        <span class="comment">// 字符字面值</span></span><br><span class="line"><span class="string">"Hello"</span>    <span class="comment">// 字符串字面值</span></span><br></pre></td></tr></table></figure>
+<h3 id="转义序列"><a href="#转义序列" class="headerlink" title="转义序列"></a>转义序列</h3><p>一些情况下需要用到转义序列打印<strong>不可打印</strong>的符号，比如：</p>
+<p><img src="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/first-week-3.png" alt=""></p>
+<h3 id="布尔字面值"><a href="#布尔字面值" class="headerlink" title="布尔字面值"></a>布尔字面值</h3><p>true 和 flase 是布尔类型的字面值。</p>
+<h1 id="变量（variable）"><a href="#变量（variable）" class="headerlink" title="变量（variable）"></a>变量（variable）</h1><p>变量在C++中是一种存储类型，可参与运算。</p>
+<h2 id="变量的定义"><a href="#变量的定义" class="headerlink" title="变量的定义"></a>变量的定义</h2><p>首先是<strong>类型说明符（type specifier）</strong>，之后是一个或多个变量，逗号分隔，分号结束。</p>
+<h3 id="初始值"><a href="#初始值" class="headerlink" title="初始值"></a>初始值</h3><p>当对象获得了一个特定的值，我们称之为对象被<strong>初始化（initialized）</strong>了。</p>
+<p><strong>重点：C++中初始化和赋值是两个完全不同的操作！</strong></p>
+<h3 id="列表初始化（list-initialization）"><a href="#列表初始化（list-initialization）" class="headerlink" title="列表初始化（list initialization）"></a>列表初始化（list initialization）</h3><p>C++有几种不同的初始化方式，如下，初始化变量 a 为 0：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> a = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> a&#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">a</span><span class="params">(<span class="number">0</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>使用中括号初始化在C++11中全面应用。其中的特点是，如果初始化存在丢失数据的风险时，编译器会报错。</p>
+<h3 id="默认初始化（default-initilized）"><a href="#默认初始化（default-initilized）" class="headerlink" title="默认初始化（default initilized）"></a>默认初始化（default initilized）</h3><p>默认值由变量类型决定！</p>
+<p><img src="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/first-week-4.png" alt=""></p>
+<h2 id="变量声明和定义的关系"><a href="#变量声明和定义的关系" class="headerlink" title="变量声明和定义的关系"></a>变量声明和定义的关系</h2><p>C++允许<strong>分离式编译（separate compilation）</strong>机制，该机制运行原理为：将程序分隔为若干文件，每个文件可以被独立编译。</p>
+
       
     </div>
 
@@ -879,7 +922,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一个Hello-World"><span class="nav-number">1.</span> <span class="nav-text">第一个Hello World</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一个Hello-World"><span class="nav-number">1.</span> <span class="nav-text">第一个Hello World</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-的输入和输出"><span class="nav-number">2.</span> <span class="nav-text">C++的输入和输出</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一个标准程序"><span class="nav-number">2.1.</span> <span class="nav-text">一个标准程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出数据"><span class="nav-number">2.2.</span> <span class="nav-text">输出数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读取数据"><span class="nav-number">2.3.</span> <span class="nav-text">读取数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-中注释的方法"><span class="nav-number">3.</span> <span class="nav-text">C++中注释的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#C-注释的种类"><span class="nav-number">3.1.</span> <span class="nav-text">C++注释的种类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型"><span class="nav-number">4.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算数类型"><span class="nav-number">4.1.</span> <span class="nav-text">算数类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型转换（convert）"><span class="nav-number">4.2.</span> <span class="nav-text">类型转换（convert）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字面值常量（literal）"><span class="nav-number">4.3.</span> <span class="nav-text">字面值常量（literal）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整型和浮点型字面值"><span class="nav-number">4.3.1.</span> <span class="nav-text">整型和浮点型字面值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符和字符串表示的字面值"><span class="nav-number">4.3.2.</span> <span class="nav-text">字符和字符串表示的字面值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转义序列"><span class="nav-number">4.3.3.</span> <span class="nav-text">转义序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔字面值"><span class="nav-number">4.3.4.</span> <span class="nav-text">布尔字面值</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量（variable）"><span class="nav-number">5.</span> <span class="nav-text">变量（variable）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的定义"><span class="nav-number">5.1.</span> <span class="nav-text">变量的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始值"><span class="nav-number">5.1.1.</span> <span class="nav-text">初始值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表初始化（list-initialization）"><span class="nav-number">5.1.2.</span> <span class="nav-text">列表初始化（list initialization）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#默认初始化（default-initilized）"><span class="nav-number">5.1.3.</span> <span class="nav-text">默认初始化（default initilized）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量声明和定义的关系"><span class="nav-number">5.2.</span> <span class="nav-text">变量声明和定义的关系</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -911,7 +954,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">11k</span>
+    <span title="站点总字数">14k</span>
   
 
   
@@ -920,7 +963,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">21 分钟</span>
+    <span title="站点阅读时长">25 分钟</span>
   
 </div>
 
