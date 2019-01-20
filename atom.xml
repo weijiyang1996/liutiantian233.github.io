@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liutiantian233.github.io/"/>
-  <updated>2019-01-20T18:58:40.380Z</updated>
+  <updated>2019-01-20T19:07:48.667Z</updated>
   <id>https://liutiantian233.github.io/</id>
   
   <author>
@@ -17,11 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>基于Primer第一周的笔记</title>
+    <link href="https://liutiantian233.github.io/uncategorized/2019/01/%E5%9F%BA%E4%BA%8EPrimer%E7%AC%AC%E4%B8%80%E5%91%A8%E7%9A%84%E7%AC%94%E8%AE%B0.html"/>
+    <id>https://liutiantian233.github.io/uncategorized/2019/01/基于Primer第一周的笔记.html</id>
+    <published>2019-01-20T19:07:48.000Z</published>
+    <updated>2019-01-20T19:07:48.667Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>关于CPP的学习手册</title>
     <link href="https://liutiantian233.github.io/about-study-manual-C/2019/01/about-cpp-study-manual.html"/>
     <id>https://liutiantian233.github.io/about-study-manual-C/2019/01/about-cpp-study-manual.html</id>
     <published>2019-01-19T00:40:35.000Z</published>
-    <updated>2019-01-20T18:58:40.380Z</updated>
+    <updated>2019-01-20T19:05:53.882Z</updated>
     
     <content type="html"><![CDATA[<h1 id="按照惯例-写在前面"><a href="#按照惯例-写在前面" class="headerlink" title="按照惯例 写在前面"></a>按照惯例 写在前面</h1><p>准确的说，这其实只能算是一个关于我学习C++过程中的检索与目录，我可不认为几篇简简单单的博客，就可以统筹概括完C++详细的知识点，越是经过深度的学习，越是发觉C++的强大，不可与同日的Python相比。</p><p>我记得在知乎上有人把C++和物理作类比，我很同意。理论物理是一场无尽的旅程，总有最前沿的东西。</p><blockquote><p>我从小就对物理感兴趣，于是我开始钻研物理，到现在，我早已是物理学博士，可我仍然不知道物理到底是什么。</p></blockquote><p>所以我的求知欲只能暂且到此为止，C++亦是如此！</p><p>到起草这篇博客开始，现在已经开学三周了。C++简单的皮毛也了解了一下，主要的程序和实验问题，我将会逐步更新至我的GitHub之上。</p><h1 id="目录与检索"><a href="#目录与检索" class="headerlink" title="目录与检索"></a>目录与检索</h1><p>看目录之前先讲个笑话：</p><blockquote><p>C语言说：我们提供标准外壳，零件和电子元件，您可以一个零件一个零件，亲手组装出任何机器。</p><p>Python说：我就像DIY爱好者的3D打印机一样，作为编程语言中真正的多面手，我们致力于让用户轻松地完成他们的工作。另外，我们也有巨量的套壳件，能让你用我们的方式使用友商的产品。不过，为了加工的方便，我们的作品一向是以塑料为主要材质的。所以请不要让它干太重的活，否则可能受不了如此沉重的折磨！</p><p>Go等其他语言：我们提供专门为某一类产品定制的集成模块，比如发动机，变速箱等等，您可以利用这些模块定制化特定种类的产品。</p><p>Java语言：我们是软件行业的蒸汽朋克，是工业时代的杰出代表。我们的产品一向以大负载，强功率著称，是你处理大量需求的不二选择。不过，请不要频繁地开关这些大家伙，因为那样的话你将浪费90%的燃料在预热机器上。</p><p>C++语言：我们提供这个世界上所有产品的集成模块，您可以快速地制作任何东西。相应地，我们还有一本长达1000页的产品说明，请务必仔细阅读，以免您不幸将飞机螺旋桨怼到潜水艇上。</p></blockquote><p>至于为什么要讲这个笑话，因为我想说：<strong>C++语言的野心非常大，但，你的野心不必这么大！</strong></p><p>并且随着大野心C++的逐步更新，一切教程语言都是会被改变，所以我推荐的第一个目录就在这里，<a href="https://zh.cppreference.com/w/首页" target="_blank" rel="noopener">中文的C++官方手册</a>，一切以官方为准。</p><ol><li>第零周：关于C++的入门<ol><li><a href="https://liutiantian233.github.io/tech/2019/01/mac-cpp-environment.html">对于环境的搭建与编译器的选择</a></li><li>一个简单的C++程序</li></ol></li><li>第一周：变量类型与表达式，算数运算<ol><li>论述部分</li><li>第一周的<a href="https://github.com/liutiantian233/CPP-Lab/tree/master/Lab01" target="_blank" rel="noopener">实验程序</a>和<a href="https://github.com/liutiantian233/CPP-Project/tree/master/Proj01" target="_blank" rel="noopener">项目</a></li></ol></li></ol><p>粗略地说，我的这篇开发手册将被划分为两个部分：</p><ul><li>学习C++和STL，并将它应用到一些实际例子。</li><li>建立我们自己的数据结构和算法（内存管理，模板等等）</li></ul><p>我介绍一些课题是：选择和迭代，字符串，函数，其他的数据结构（载体，字符串，地图等）文件的I/O和通用的算法，最后是用户自定义的Class。</p><h1 id="关于编码的规则"><a href="#关于编码的规则" class="headerlink" title="关于编码的规则"></a>关于编码的规则</h1><p>在这个过程中，我们将遵守一套约定关于我们如何在程序命名变量，函数和常量，我们如何缩进等。虽然编码规则往往是任意的，选择一个一致的组织。我们将选择使用<a href="https://google.github.io/styleguide/cppguide.html" target="_blank" rel="noopener">谷歌编码标准</a>，可以在那里寻找，并找到正确的标准答案。</p><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://zh.cppreference.com/w/首页" target="_blank" rel="noopener">来自官方手册</a></p><p>C++ Primer中文译本（由于文件过大，需自行下载或<a href="https://liutiantian233.github.io/about/">联系我</a>）</p>]]></content>
     
@@ -56,11 +70,11 @@
       <category term="技术" scheme="https://liutiantian233.github.io/categories/tech/"/>
     
     
-      <category term="C++的开发和进度" scheme="https://liutiantian233.github.io/tags/C-development-and-progress/"/>
+      <category term="产品技术测评" scheme="https://liutiantian233.github.io/tags/product-technology-evaluation/"/>
     
       <category term="Macbook Pro相关" scheme="https://liutiantian233.github.io/tags/Macbook-Pro-related/"/>
     
-      <category term="产品技术测评" scheme="https://liutiantian233.github.io/tags/product-technology-evaluation/"/>
+      <category term="C++的开发和进度" scheme="https://liutiantian233.github.io/tags/C-development-and-progress/"/>
     
   </entry>
   
@@ -82,9 +96,9 @@
       <category term="技术" scheme="https://liutiantian233.github.io/categories/tech/"/>
     
     
-      <category term="Macbook Pro相关" scheme="https://liutiantian233.github.io/tags/Macbook-Pro-related/"/>
-    
       <category term="产品技术测评" scheme="https://liutiantian233.github.io/tags/product-technology-evaluation/"/>
+    
+      <category term="Macbook Pro相关" scheme="https://liutiantian233.github.io/tags/Macbook-Pro-related/"/>
     
   </entry>
   
