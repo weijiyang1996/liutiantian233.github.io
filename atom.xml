@@ -54,11 +54,11 @@
       <category term="技术" scheme="https://liutiantian233.github.io/categories/tech/"/>
     
     
+      <category term="C++的开发和进度" scheme="https://liutiantian233.github.io/tags/C-development-and-progress/"/>
+    
       <category term="产品技术测评" scheme="https://liutiantian233.github.io/tags/product-technology-evaluation/"/>
     
       <category term="Macbook Pro相关" scheme="https://liutiantian233.github.io/tags/Macbook-Pro-related/"/>
-    
-      <category term="C++的开发和进度" scheme="https://liutiantian233.github.io/tags/C-development-and-progress/"/>
     
   </entry>
   
@@ -107,6 +107,26 @@
       <category term="博客搭建" scheme="https://liutiantian233.github.io/tags/blog-building/"/>
     
       <category term="博客模块" scheme="https://liutiantian233.github.io/tags/blog-module/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于我的第一篇博客</title>
+    <link href="https://liutiantian233.github.io/daily/2018/12/about-my-first-blog.html"/>
+    <id>https://liutiantian233.github.io/daily/2018/12/about-my-first-blog.html</id>
+    <published>2018-12-30T17:40:50.000Z</published>
+    <updated>2019-01-20T17:43:51.462Z</updated>
+    
+    <summary type="html">
+    
+      这是我2018年底写的第一篇博客
+    
+    </summary>
+    
+      <category term="日常" scheme="https://liutiantian233.github.io/categories/daily/"/>
+    
+    
+      <category term="吐槽项" scheme="https://liutiantian233.github.io/tags/%E5%90%90%E6%A7%BD%E9%A1%B9/"/>
     
   </entry>
   
