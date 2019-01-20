@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liutiantian233.github.io/"/>
-  <updated>2019-01-20T19:15:46.829Z</updated>
+  <updated>2019-01-20T19:54:28.797Z</updated>
   <id>https://liutiantian233.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于Primer第一周的笔记</title>
+    <link href="https://liutiantian233.github.io/about-study-manual-C/2019/01/the-first-week-for-C++.html"/>
+    <id>https://liutiantian233.github.io/about-study-manual-C/2019/01/the-first-week-for-C++.html</id>
+    <published>2019-01-20T19:10:48.000Z</published>
+    <updated>2019-01-20T19:54:28.797Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第一个Hello-World"><a href="#第一个Hello-World" class="headerlink" title="第一个Hello World"></a>第一个<code>Hello World</code></h1>]]></content>
+    
+    <summary type="html">
+    
+      这是基于C++ Primer的第一周笔记，主要内容为C++的基本语句和逻辑运算，数据类型与基础表达式。详细请见C++ Primer   1.1-1.3   2.1-2.2   4.1-4.5   4.11.1
+    
+    </summary>
+    
+      <category term="关于C++的学习手册" scheme="https://liutiantian233.github.io/categories/about-study-manual-C/"/>
+    
+    
+      <category term="C++的开发和进度" scheme="https://liutiantian233.github.io/tags/C-development-and-progress/"/>
+    
+  </entry>
   
   <entry>
     <title>关于CPP的学习手册</title>
