@@ -116,7 +116,7 @@
 <meta property="og:description" content="这是基于C++ Primer的第二周笔记，主要内容为C++的控制语句。包括简单语句，条件语句，迭代语句和跳转语句。详细请见C++ Primer的5.1节至5.5节，跳过5.4.3节。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/second-week-1.jpg">
-<meta property="og:updated_time" content="2019-01-24T14:14:05.519Z">
+<meta property="og:updated_time" content="2019-01-24T15:08:04.320Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Primer第二周的笔记">
 <meta name="twitter:description" content="这是基于C++ Primer的第二周笔记，主要内容为C++的控制语句。包括简单语句，条件语句，迭代语句和跳转语句。详细请见C++ Primer的5.1节至5.5节，跳过5.4.3节。">
@@ -413,7 +413,7 @@
                 
               
 
-              <time title="创建时间：2019-01-24 09:00:45 / 修改时间：09:14:05" itemprop="dateCreated datePublished" datetime="2019-01-24T09:00:45-05:00">2019-01-24</time>
+              <time title="创建时间：2019-01-24 09:00:45 / 修改时间：10:08:04" itemprop="dateCreated datePublished" datetime="2019-01-24T09:00:45-05:00">2019-01-24</time>
             
 
             
@@ -471,7 +471,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0</span>
+                <span title="本文字数">736</span>
               
 
               
@@ -509,7 +509,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/second-week-1.jpg" rel="gallery_cjrap87cf0009i0yu5g9526op" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/second-week-1.jpg" rel="gallery_cjrar5ix60006lnyus7mc8n4x" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/second-week-1.jpg" itemprop="contentUrl">
               </a>
             
@@ -521,7 +521,23 @@
       
 
       
-        
+        <h1 id="简单语句"><a href="#简单语句" class="headerlink" title="简单语句"></a>简单语句</h1><p>通常情况下，语句都是按顺序执行，但除非是最简单的程序，不然仅仅执行顺序语句对于程序是远远不够的。所以C++语言提供了一组<strong>控制流（flow-of-control）</strong>语句以支持复杂的语句。</p>
+<p>一个表达式末尾加上分号就变成了<strong>表达式语句（expression statement）</strong>。其作用是执行表达式并丢弃求值结果。</p>
+<h2 id="空语句"><a href="#空语句" class="headerlink" title="空语句"></a>空语句</h2><p>最简单的语句就是<strong>空语句（null statement）</strong>，只含有一个分号。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">;  <span class="comment">// 空语句</span></span><br></pre></td></tr></table></figure>
+<p>空语句被用作于：<strong>语法上需要一条语句，但逻辑上不需要。</strong>一种常见的情况是，当循环的全部工作在条件部分就可以完成时，通常会用到空语句。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 重复读如数据直至某次输入的值等于sought</span></span><br><span class="line"><span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; s &amp;&amp; s != sought)</span><br><span class="line">    ;  <span class="comment">// 空语句</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/second-week-2.png" alt=""></p>
+<h2 id="别漏写分号，也别多写分号"><a href="#别漏写分号，也别多写分号" class="headerlink" title="别漏写分号，也别多写分号"></a>别漏写分号，也别多写分号</h2><p>因为空语句是一条语句，可以用在任何地方。由于这个原因，很多看起来是非法的语句，往往都是空语句。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v = v1 + v2;;  <span class="comment">// 正确：第二个分号表示一条多余的空语句</span></span><br></pre></td></tr></table></figure>
+<p>一般来说空语句是无害的，但如果出现在 if 或者 while 之后，就会改变程序的初衷。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (iter != svec.end()) ;  <span class="comment">// 循环空语句</span></span><br><span class="line">    ++iter;</span><br></pre></td></tr></table></figure>
+<p><strong>多余的空语句并非总是无害的</strong></p>
+<h2 id="复合语句-块"><a href="#复合语句-块" class="headerlink" title="复合语句 / 块"></a>复合语句 / 块</h2><p><strong>复合语句（compound statement）</strong>是指用花括号括起来的语句和声明的序列。复合语句也被叫做<strong>块（block）</strong>。在块中引入的名字只能在块中内访问。</p>
+<p>如果在程序中：<strong>语法上需要一条语句，但逻辑上需要多条语句。</strong>则应该使用复合语句。</p>
+<p><img src="https://raw.githubusercontent.com/liutiantian233/Blog/master/201901/second-week-3.png" alt=""></p>
+<p>所谓空块，是指内部没有任何语句的一对花括号，空块作用等价于空语句。</p>
+<h1 id="语句的作用域"><a href="#语句的作用域" class="headerlink" title="语句的作用域"></a>语句的作用域</h1>
       
     </div>
 
@@ -653,8 +669,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -860,6 +885,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单语句"><span class="nav-number">1.</span> <span class="nav-text">简单语句</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#空语句"><span class="nav-number">1.1.</span> <span class="nav-text">空语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#别漏写分号，也别多写分号"><span class="nav-number">1.2.</span> <span class="nav-text">别漏写分号，也别多写分号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合语句-块"><span class="nav-number">1.3.</span> <span class="nav-text">复合语句 / 块</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语句的作用域"><span class="nav-number">2.</span> <span class="nav-text">语句的作用域</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -885,7 +927,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">15k</span>
+    <span title="站点总字数">16k</span>
   
 
   
@@ -894,7 +936,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">27 分钟</span>
+    <span title="站点阅读时长">28 分钟</span>
   
 </div>
 
