@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liutiantian233.github.io/"/>
-  <updated>2019-01-26T22:18:26.342Z</updated>
+  <updated>2019-01-27T15:35:55.679Z</updated>
   <id>https://liutiantian233.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于Primer第三周的笔记</title>
+    <link href="https://liutiantian233.github.io/about-study-manual-C/2019/01/the-third-week-for-C++.html"/>
+    <id>https://liutiantian233.github.io/about-study-manual-C/2019/01/the-third-week-for-C++.html</id>
+    <published>2019-01-27T15:20:32.000Z</published>
+    <updated>2019-01-27T15:35:55.679Z</updated>
+    
+    <summary type="html">
+    
+      这是基于C++ Primer的第三周笔记，主要内容为C++的函数和更多的程序类型。包括函数基础，参数传递，返回类型，复合类型，处理类型，引用和指针。详细请见C++ Primer的6.1节至6.3节，2.3节至2.5节。
+    
+    </summary>
+    
+      <category term="关于C++的学习手册" scheme="https://liutiantian233.github.io/categories/about-study-manual-C/"/>
+    
+    
+      <category term="C++的开发和进度" scheme="https://liutiantian233.github.io/tags/C-development-and-progress/"/>
+    
+  </entry>
   
   <entry>
     <title>基于Primer第二周的笔记</title>
@@ -100,11 +120,11 @@
       <category term="技术" scheme="https://liutiantian233.github.io/categories/tech/"/>
     
     
+      <category term="C++的开发和进度" scheme="https://liutiantian233.github.io/tags/C-development-and-progress/"/>
+    
       <category term="产品技术测评" scheme="https://liutiantian233.github.io/tags/product-technology-evaluation/"/>
     
       <category term="Macbook Pro相关" scheme="https://liutiantian233.github.io/tags/Macbook-Pro-related/"/>
-    
-      <category term="C++的开发和进度" scheme="https://liutiantian233.github.io/tags/C-development-and-progress/"/>
     
   </entry>
   
